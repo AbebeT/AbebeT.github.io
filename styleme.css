@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(247, 244, 244);
+    margin: 25px;
+}
+
+.myDiv {    
+    background-color: rgb(66, 5, 5);    
+    border: 10px;     
+    text-align: center;    
+    height: 120px
+    
+  }
+  .bold {
+      color: cyan;
+  }
+  h1{
+      color: rgb(185, 168, 168)
+  }
+  h2{
+    color: rgb(150, 14, 14)
+}
+  p{
+      color: rgb(107, 111, 116);
+      font-size: x-large;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-style: italic;
+  }
+
+  
