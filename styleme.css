@@ -10,8 +10,15 @@ body {
     height: 120px
     
   }
-  .bold {
-      color: cyan;
+#subtitles {
+    color: darkblue;
+    font-family: 'Times New Roman', Times, serif;
+}
+ a:hover{
+     text-decoration: underline;
+ }
+ a:link {
+    text-decoration: none;
   }
   h1{
       color: rgb(185, 168, 168)
