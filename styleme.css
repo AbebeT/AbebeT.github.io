@@ -33,4 +33,11 @@ body {
       font-style: italic;
   }
 
+  p.shout::first-letter {
+    font-size: 2em;
+    float: left;
+    padding: 0.5px;
+    margin-right: 2px;
+  }
+
   
