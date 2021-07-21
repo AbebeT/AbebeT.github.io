@@ -7,12 +7,13 @@ body {
     background-color: rgb(66, 5, 5);    
     border: 10px;     
     text-align: center;    
-    height: 120px
+    height: 100px
     
   }
 #subtitles {
     color: darkblue;
     font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
 }
  a:hover{
      text-decoration: underline;
@@ -30,7 +31,7 @@ body {
       color: rgb(107, 111, 116);
       font-size: x-large;
       font-family: Georgia, 'Times New Roman', Times, serif;
-      font-style: italic;
+      font-style: normal;
   }
 
   p.shout::first-letter {
