@@ -1,0 +1,130 @@
+body{
+	background-image: url('background.png');
+	font-size: 8pt;
+	font-family: Verdana, Tahoma, sans-serif;
+	margin: 0;
+	padding: 0;
+	
+}
+
+#header{
+	height: 50px;
+	background-image: url('bannerbg.png');
+}
+#header .Banner
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.heading {
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+	font-family: Verdana, Tahoma, sans-serif;
+	text-shadow: 3px 3px #999999;
+}
+
+#content {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 4px solid gray;
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+#content .criticalReview {
+	width: 550px;
+	float: left;
+}
+#content .criticalReview .rottenBanner {
+	background-image: url("rbg.png");
+	background-repeat: repeat-x;
+	font-size: 48pt;
+	color: red;
+	font-weight: bold;
+}
+#content .criticalReview .rottenBanner img {
+	vertical-align: bottom;
+	height: 83px;
+}
+
+
+#content .criticalReview .review {
+	border: 2px solid gray;
+	background-color: #E8DC9B;
+	border-radius: 10px;
+	font-weight: bold;
+	padding:8px;
+	overflow: hidden;
+}
+
+.review img{
+	padding-right: 5px;
+	float: left;
+	vertical-align: top;
+}
+#content .criticalReview .review img {
+	margin-right: 5px;
+	vertical-align: top;
+	float: left;
+}
+
+#content .criticalReview .critic {
+	margin-bottom: 20pt;
+}
+#content .criticalReview .critic img {
+	margin-right: 5px;
+	vertical-align: top;
+	float: left;
+}
+#content .criticalReview .critic .pub {
+	font-style: italic;
+}
+
+#content .criticalReview .reviewSection {
+	float: left;
+	width: 47%;
+	margin-left: 2%;
+}
+
+#content .overview {
+	width: 250px;
+	float: right;
+	font-size: 8pt;
+	font-family: Arial, sans-serif;
+	background-color: #A2B964;
+}
+#content .overview .OverviewCast {
+	margin: 10pt;
+}
+#content .overview dt {
+	font-weight: bold;
+	margin-top: 10pt;
+}
+#content .overview ul, li {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+#content .bottom-content {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	background-color: #A2B964;
+	padding: 5px;
+}
+#content .bottom-content p {
+	margin: 0px;
+}
+
+#validator {
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+}
+#validator img {
+	opacity: 0.5;
+}
