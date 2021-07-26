@@ -66,8 +66,6 @@ function startFunction(stringValue) {
     }
 
 }
-
-
 function stop() {
     document.getElementById("start").disabled = false;
     document.getElementById("animation").disabled = false;
@@ -75,11 +73,7 @@ function stop() {
     clearInterval(id);
     document.getElementById("stop").disabled = true;
     // $("#stop").disabled = true;
-
-
 }
-
-
 
 function animationSelector(s) {
     document.getElementById("start").disabled = false;
@@ -87,7 +81,6 @@ function animationSelector(s) {
     var whichOne = s;
     let textArea = document.getElementById("text-area");
     textArea.innerHTML = ANIMATIONS[whichOne];
-
 }
 
 function changeFontSize(fontsize) {
@@ -109,7 +102,6 @@ function turboF() {
     // animationSelector(document.getElementById("animation").value);
     stop();
     startFunction(ANIMATIONS[document.getElementById("animation").value]);
-
 }
 
 
