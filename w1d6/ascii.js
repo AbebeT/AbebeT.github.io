@@ -63,7 +63,7 @@ function stop() {
         document.getElementById("text-area").innerHTML = beginningText;
     document.getElementById("stop").disabled = true;
 }
-function animationSelector(s) {;;
+function animationSelector(s) {
     document.getElementById("start").disabled = false;
     stop();
     let whichOne = s;
