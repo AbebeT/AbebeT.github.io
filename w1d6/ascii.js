@@ -3,6 +3,7 @@ let id;
 let interval = 250;
 let turbobox = false;
 let beginningText="";
+let turboClicked = false;
 
 window.onload = function () {
     "use strict";
@@ -75,7 +76,17 @@ function stop() {
     document.getElementById("animation").disabled = false;
     
     clearInterval(id);
-    document.getElementById("text-area").innerHTML = beginningText;
+    if(turboClicked){
+        document.getElementById("text-area").innerHTML = beginningText.split("=====\n")[0];
+        turboClicked = false;
+        
+    }
+    else{
+        document.getElementById("text-area").innerHTML = beginningText;
+
+    }
+
+    
     document.getElementById("stop").disabled = true;
     // $("#stop").disabled = true;
 }
@@ -105,6 +116,7 @@ function turboF() {
     }
 
     // animationSelector(document.getElementById("animation").value);
+    turboClicked = true;
     stop();
     startFunction(ANIMATIONS[document.getElementById("animation").value]);
 }
