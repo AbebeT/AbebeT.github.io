@@ -1,21 +1,24 @@
+/*jslint browser: true*/
 let id;
 let interval = 250;
 let turbobox = false;
+let beginningText="";
+
 window.onload = function () {
     "use strict";
+    
     // start button
-    let startButton = window.document.getElementById("start");//document.getElementById("start");
+    let startButton = window.document.getElementById("start");
     startButton.onclick = function () { startFunction("nn") };
 
     // animation type
     let animationType = document.getElementById("animation");
-    animationType.onchange = function () { animationSelector(document.getElementById("animation").value) };
+    animationType.onchange = function () { animationSelector(animationType.value) };
 
 
     // fontsize
     let fontsize = document.getElementById("fontsize");
-    fontsize.onchange = function () { changeFontSize(document.getElementById("fontsize").value) };
-
+    fontsize.onchange = function () { changeFontSize(fontsize.value) };
 
     // stop button 
     let stopBtn = document.getElementById("stop");
@@ -35,12 +38,14 @@ function startFunction(stringValue) {
 
     if (stringValue !== "nn") {
         textAreaValue = stringValue;
+        beginningText = textAreaValue;
     }
     else {
 
         textAreaValue = textArea.innerHTML;
+        beginningText = textAreaValue;
         if (textAreaValue === "") {
-            textArea.innerHTML = "Warning: choose animation type!!!"
+            textArea.innerHTML = "Warning: choose animation type!!!";
             return;
 
         }
@@ -56,12 +61,11 @@ function startFunction(stringValue) {
         if (i === splitted.length) {
             i = 0;
             textArea.innerHTML = splitted[i];
-            i++;
         }
         else {
             textArea.innerHTML = splitted[i];
-            i++;
         }
+        i++;
 
     }
 
@@ -71,6 +75,7 @@ function stop() {
     document.getElementById("animation").disabled = false;
     
     clearInterval(id);
+    document.getElementById("text-area").innerHTML = beginningText;
     document.getElementById("stop").disabled = true;
     // $("#stop").disabled = true;
 }
@@ -78,7 +83,7 @@ function stop() {
 function animationSelector(s) {
     document.getElementById("start").disabled = false;
     stop();
-    var whichOne = s;
+    let whichOne = s;
     let textArea = document.getElementById("text-area");
     textArea.innerHTML = ANIMATIONS[whichOne];
 }
@@ -103,7 +108,3 @@ function turboF() {
     stop();
     startFunction(ANIMATIONS[document.getElementById("animation").value]);
 }
-
-
-
-
