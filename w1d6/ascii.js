@@ -2,11 +2,11 @@
 let id;
 let interval = 250;
 let turbobox = false;
-let beginningText="";
+let beginningText = "";
 let turboClicked = false;
 
 window.onload = function () {
-    "use strict";    
+    "use strict";
     // start button
     let startButton = window.document.getElementById("start");
     startButton.onclick = function () { startFunction("begin") };
@@ -45,25 +45,25 @@ function startFunction(stringValue) {
     let i = 0;
     id = setInterval(setAnimation, interval)
     function setAnimation() {
-        if (i === splitted.length) 
+        if (i === splitted.length)
             i = 0;
-        textArea.innerHTML = splitted[i];        
+        textArea.innerHTML = splitted[i];
         i++;
     }
 }
 function stop() {
     document.getElementById("start").disabled = false;
-    document.getElementById("animation").disabled = false;    
+    document.getElementById("animation").disabled = false;
     clearInterval(id);
-    if(turboClicked){
+    if (turboClicked) {
         document.getElementById("text-area").innerHTML = beginningText.split("=====\n")[0];
-        turboClicked = false;        
+        turboClicked = false;
     }
     else
         document.getElementById("text-area").innerHTML = beginningText;
     document.getElementById("stop").disabled = true;
 }
-function animationSelector(s) {
+function animationSelector(s) {;;
     document.getElementById("start").disabled = false;
     stop();
     let whichOne = s;
@@ -77,10 +77,10 @@ function changeFontSize(fontsize) {
 }
 function turboF() {
     turbobox = document.getElementById("turbo").checked;
-    if (turbobox === true) 
+    if (turbobox === true)
         interval = 50;
-    else 
-        interval = 250;    
+    else
+        interval = 250;
     turboClicked = true;
     stop();
     startFunction(ANIMATIONS[document.getElementById("animation").value]);
