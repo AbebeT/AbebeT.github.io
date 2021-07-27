@@ -9,6 +9,7 @@ window.onload = function () {
     "use strict";
     // start button
     let startButton = window.document.getElementById("start");
+    // let startButton = $("#start");
     startButton.onclick = function () { startFunction("begin") };
     // animation type
     let animationType = document.getElementById("animation");

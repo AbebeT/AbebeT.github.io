@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+   
+      <nav class="navbar navbar-dark bg-primary justify-content-between border border-light border-bottom-0 border-right-0 border-left-0">
+        <form class="form-inline">
+        <a class="navbar-brand text-light">MUM Goden Dome Market ::: SRM System</a>
+        <a class="text-light border border-light border-bottom-0  border-top-0 p-3"> Products </a>
+        <a class="text-light bg-primary border-0 p-3"> Suppliers</a>
+        </form>
+        <form class="form-inline">
+            <button class="text-light bg-primary border-0 p-2" type="text">Hello!</button>
+            <button type="button" class="btn btn-light">Sign Out</button>
+        </form>
+      </nav>
+      <div class =" m-4">
+    <h6>New Product Form</h6>
+    <form>
+        <div class="form-row ">
+            <div class="form-group col-md-6">
+                <label for="product">Product Number</label>
+                <input type="text" class="form-control" id="product">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="quanInStock">Quantity in Stock</label>
+                <input type="text" class="form-control" id="quanInStock" placeholder="0">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="selectSupplier">Supplier</label>
+                <select id="selectSupplier" class="form-control">
+                    <option selected>Select Supplier</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="unitPrice">Unit Price</label>
+                <input type="text" class="form-control" id="unitPrice" placeholder="0.0">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputDate">Date supplied</label>
+                <input type="date" class="form-control" id="inputDate" aria-describedby="dateHelper"
+                    placeholder="yyyy-mm-dd">
+                <small id="dateHelper" class="form-text text-muted">Enter a valid Date.</small>
+            </div>
+        </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-8"> </div>
+            <div class="form-group col-md-4">
+            <button type="button" class="btn btn-outline-primary m-2">Reset</button>
+            <button type="button" class="btn btn-outline-danger m-2">Cancel</button>
+            <button type="button" class="btn btn-outline-info m-2">Add Product</button>
+        </div>
+        </div>
+    </form>
+</div>
+</body>
+
+</html>
