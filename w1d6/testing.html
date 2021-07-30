@@ -20,15 +20,480 @@
 <body>
 
     <script>
-        function pow(x, n) {
-            let result = 1;
 
-            for (let i = 0; i < n; i++) {
-                result *= x;
-            }
-
-            return result;
+        // Write a function called longestNoSpace() that receives any amount of strings 
+        // (ideally with a rest parameter, although you can also use arguments), 
+        // and then uses functional techniques ( .filter() .map() .reduce() ) 
+        // to return the length of the longest string that does not contain a space inside it.
+        function hasWhiteSpace(s) {
+            return s.indexOf(' ') >= 0;
         }
+        function longestNoSpace(...strings) {
+            return strings
+                .filter((str) => { return str.indexOf(" ") < 0 })
+                .map((str) => { return str.length })
+                .reduce((acc, curr) => { return curr > acc ? curr : acc }, 0)
+        }
+        // console.log(longestNoSpace(["abeb e", "abe be", "ha gos", "hahahahaha"]));
+
+
+        // var funcs = [];
+        // for (let i = 0; i < 5; i++) {
+        //     funcs[i] = function () {
+        //         return i;
+        //     };
+        // }
+        // console.log(funcs[0]());
+        // console.log(funcs[1]());
+        // console.log(funcs[2]());
+        // console.log(funcs[3]());
+        // console.log(funcs[4]());
+
+        /* x = 1;
+         var a = 5;
+         var b = 10;
+         
+         var c = function (a, b, c) {
+             
+             console.log("first: " + x);
+             console.log("second: " + a);
+             
+             // console.log("gg: " + gg);
+             var f = function (a, b, c) {
+                 b = a;
+                 console.log("third: " + b);
+                 b = c;
+                 var x = 5;
+                 
+             }
+             f(a, b, c);
+             console.log("fourth: " + b);
+             var x = 10;
+         }
+         c(8, 9, 10);
+         console.log("fifth:" + b);
+         console.log("sixth:" + x); 
+         */
+
+        /* var x = 9;
+        function myFunction(){
+            return x * x ;
+        }
+        console.log(myFunction());
+        x = 5;
+        console.log(myFunction());
+        */
+
+        // var foo = 1;
+        // function bar() {
+        //     // var foo ;
+        //     console.log("foo: " + foo);
+        //     if (!foo) {
+        //         // foo = 10;
+        //         var foo = 10;
+        //         console.log("true")
+        //     }
+        //     alert(foo);
+        // }
+        // bar();
+
+        // var x = 5;
+        // var y = 7;
+        // function a() {
+        //     function b() {
+        //         console.log(`1: x=${x} y=${y}`);  //1: x: undefined y:7 
+        //         y = 10;
+        //         return function c(y) {
+        //             console.log(`2: x=${x} y=${y}`);    //  2: x:10, y: 20
+        //         }
+        //     }
+        //     console.log(`3: x=${x} y=${y}`);    // 3. x: undefined y: 7
+        //     var z = b()
+        //     var x = 10;
+        //     z(20);
+        // }
+        // console.log(`4: x=${x} y=${y}`);      // 4. x: 5 y: 7
+        // a();
+        // console.log(`5: x=${x} y=${y}`);      // 5: x:5 y: 7
+        // 4, 3, 1, 2, 5
+        
+        // javascript objects
+        // const pt = {
+        //     x: 4,
+        //     y: 5,
+        //     distanceFromOrigin: function () { return Math.sqrt(this.x * this.x + this.y + this.y); }
+        // };
+
+        //    var a = {
+        //        name:"",
+        //        log: function(){
+        //            this.name = "hello";
+        //            console.log(this.name);
+
+        //            var setFrench = function(newName){
+        //                this.name = newName;
+        //            };
+        //            setFrench("Bonjour");
+        //            console.log(this.name);
+        //        }
+        //    };
+
+        // IIFE Module pattern
+        // (function(params){
+        //     //.. statements    
+        // })(params);
+
+        // (function(params){
+        //     // ... statements
+        // }(params));   // a syntax to declare a function that will be immediately invoked
+
+        // Module pattern example
+        // var count = 0;
+        // function incr(n){
+        //     count+=n;
+        // }
+        // function reset(){
+        //     count = 0;
+        // }
+        // incr(4);
+        // incr(2);
+        // console.log("count: " + count);
+
+        // // converting the above code into module pattern
+        // (function(){
+        // var count = 0;
+        // function incr(n){
+        //     count+=n;
+        // }
+        // function reset(){
+        //     count = 0;
+        // }
+        // incr(4);
+        // incr(2);
+        // console.log("count: " + count);
+        // })();
+
+        // {
+        //     let count = 0 ;
+        //     const incr = function(n){
+        //         count+=n;
+        //     }
+        //     const reset = function(n){
+        //         count = 0;
+        //     }
+        //     incr(4);
+        //     incr(2);
+        //     console.log(count);
+        // };
+
+        // assignment
+        // const module = (function(){
+        //     var counter = 0 ;
+        //     const add = function(){
+        //         counter+=1;
+
+        //     };
+        //     const reset = function(){
+        //         counter = 0;
+
+        //     };
+        //     return {
+        //         addMethod : add,
+        //         resetMethod : reset
+        //     };
+        // })();
+
+
+        // const module = (function(){
+        //     var counter = 0 ;
+        //     const add = function(n){
+        //         return counter+=n;
+
+        //     };
+        //     const reset = function(){
+        //         return counter = 0;
+
+        //     };
+
+        //     const make_adder = function(n){
+        //         return add(n);
+
+        //     };
+
+        //     return {
+        //         addMethod : add,
+        //         resetMethod : reset,
+        //         makeAdder : make_adder
+        //     };
+        // })();
+
+        // const validater = (function(){
+
+        //     const validateFirstName = function(){
+        //         let field1 = document.getElementById("first");
+        //         return !field1.value.includes("===")
+
+        //     };
+        //     const validateLastName = function(){
+        //         let field2 = document.getElementById("first");
+        //         return !field2.value.includes("===")
+
+        //     };
+        //     validateAll = function(){
+        //         return validateFirstName && validateLastName;
+        //     }
+
+
+
+        //     return {
+        //         validate : validateAll,
+
+
+        //     }
+        // })();
+
+        // Changing the code to module pattern protects my code and avoids global javascript namespace.
+
+        // console.log(this === window)
+        // a = 37;
+        // console.log(a);
+        // console.log(this.a);
+        // console.log(window.a);
+
+        // this.b = "MDN";
+        // console.log(window.b)  // "MDN"
+        // console.log(b)         // "MDN"
+        // ====================================
+
+        // function sam(){
+        //     this.newvar = "hello";
+        // }
+        // // console.log(newvar);
+        // sam();
+        // console.log(newvar);
+        //===============
+        // this inside event handler
+
+        // const changeMyColorButton1 = document.getElementById("btn1");
+        // const changeMyColorButton2 = document.getElementById("btn2");
+
+        // changeMyColorButton1.onclick  = changeMyColor;
+
+
+        // function changeMyColor() {
+        //     this.style.color = "red";
+        // }
+
+        // ===============================
+
+        // var a = {
+        //     name : "",
+        //     log : function() {
+        //         var self = this;
+        //         self.name = "hello";
+        //         console.log(self.name + " " + typeof(this.name));
+
+        //         var setFrench = function(newName){
+        //             self.name = newName; // called from window 
+        //         }
+        //         setFrench("Bonjour");
+        //         console.log(self.name);
+
+
+        //     }
+
+
+        // };
+        // a.log();
+
+        // =========================
+
+        /*var car = {
+            registrationNumber: "GA12345",
+            brand: "Toyota",
+
+            displayDetails: function (ownerName) {
+                console.log(ownerName + " " + this.registrationNumber + " " + this.brand);
+            }
+        }
+
+        var myCarInfo = car.displayDetails.bind(car, "abebe");
+        myCarInfo();
+
+        var func = function () {
+            console.log(this)
+        }.bind("abebe");
+
+        func();
+        */
+
+
+        /*var car = {
+            registrationNumber : "GA12345",
+            brand : "Toyota"
+        };
+
+        function displayDetails(ownerName){
+            console.log(ownerName + ",  this is your car: " + this.registrationNumber + " " + this.brand);
+        }
+
+        displayDetails.call(car, "abebe");
+        */
+
+        // function multiply(a, b){
+        //     return a* b;
+        // }
+
+        // const multiplyByTwo = multiply.bind(null, 2);
+        // console.log(multiplyByTwo(4));
+
+        // const return8 = multiply.bind(null, 2, 4);
+        // console.log(return8());
+
+        // const module = (function(){
+        //     let age = 21;
+        //     const privateFunc = function(){
+        //         age = 25;
+        //         console.log("my age is: " + age);
+        //     }
+        //     const publicFunc = function(){
+        //         privateFunc();
+        //     }
+
+        //     return {
+        //         publicFuncName : publicFunc
+        //     };
+        // })();
+
+        // module.extension = function(){
+        //     console.log("another function added");
+        // };
+        
+        // const module = (function(){
+        //     var counter = 0;
+
+        //     const add = function(){
+        //         return counter+=1;
+        //     }
+        //     const reset = function(){
+        //         counter = 0;
+        //     }
+
+        //     return {
+        //         add : add,
+        //         reset : reset
+        //     };            
+        // })();
+
+        // console.log(module.add());
+
+        // function make_adder(inc){
+        //     var counter = 0;
+        //     return function(){
+        //          return counter +=inc; 
+        //         }
+
+        // }
+        // var add5 = make_adder(5);
+       
+        // console.log(add5());
+        // console.log(add5());
+
+        // const Employee = (function(){
+        //     var name;
+        //     var age;
+        //     var salary;
+
+        //     const getName = function(){
+        //         return name;
+        //     }
+        //     const getAge = function(){
+        //         return age;
+        //     }
+        //     const getSalary = function(){
+        //         return salary;
+        //     }
+        //     const setSalary = function(s){
+        //         salary = s;
+        //     }
+        //     const setAge = function(a){
+        //         age =a;
+        //     }
+        //     const setName = function(n){
+        //         name = n;
+        //     }
+        //     const increaseSalary = function(percentage){
+        //         return getSalary() +  getSalary() * percentage;
+        //     }
+        //     const incrementAge = function(){
+        //         return getAge() + 1;
+        //     }
+
+        //     return {
+        //         getName : getName
+        //     }
+
+        // })();
+
+//         var x = 5;
+// var y = test();
+// var b = { x: 4 };
+// var z = y.bind(b);
+// z();
+// function test() {
+//     console.log(this);
+//     console.log(x);
+//     var z = function() {
+//         var x = 3;
+//         console.log(this);
+//         console.log(this.x);
+//     }
+//     var x = 8;
+//     z();
+//     return z;
+// }
+// function make_adder(inc){
+//      var counter = 0;
+    
+//      return function() { return counter +=inc;};
+        
+// }
+
+// adder = make_adder(5);
+// console.log(adder());
+// console.log(adder());
+
+// adder2 = make_adder(7);
+// console.log(adder2());
+
+var sum = [{x: 1}, {x:2}, {x:3}].reduce( function (accumulator, currentValue){
+        return accumulator + currentValue.x;}, 0);
+console.log(sum);
+
+
+
+        
+        
+
+
+        
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
     <!-- the script with tests (describe, it...) -->
@@ -41,6 +506,9 @@
     <script>
         mocha.run();
     </script>
+
+    <button id="btn1">Button1</button>
+    <button id="btn2">Button2</button>
 </body>
 
 </html>
