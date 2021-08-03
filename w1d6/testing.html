@@ -116,7 +116,7 @@
         // a();
         // console.log(`5: x=${x} y=${y}`);      // 5: x:5 y: 7
         // 4, 3, 1, 2, 5
-        
+
         // javascript objects
         // const pt = {
         //     x: 4,
@@ -368,7 +368,7 @@
         // module.extension = function(){
         //     console.log("another function added");
         // };
-        
+
         // const module = (function(){
         //     var counter = 0;
 
@@ -395,7 +395,7 @@
 
         // }
         // var add5 = make_adder(5);
-       
+
         // console.log(add5());
         // console.log(add5());
 
@@ -435,52 +435,190 @@
 
         // })();
 
-//         var x = 5;
-// var y = test();
-// var b = { x: 4 };
-// var z = y.bind(b);
-// z();
-// function test() {
-//     console.log(this);
-//     console.log(x);
-//     var z = function() {
-//         var x = 3;
-//         console.log(this);
-//         console.log(this.x);
-//     }
-//     var x = 8;
-//     z();
-//     return z;
-// }
-// function make_adder(inc){
-//      var counter = 0;
-    
-//      return function() { return counter +=inc;};
+        //         var x = 5;
+        // var y = test();
+        // var b = { x: 4 };
+        // var z = y.bind(b);
+        // z();
+        // function test() {
+        //     console.log(this);
+        //     console.log(x);
+        //     var z = function() {
+        //         var x = 3;
+        //         console.log(this);
+        //         console.log(this.x);
+        //     }
+        //     var x = 8;
+        //     z();
+        //     return z;
+        // }
+        // function make_adder(inc){
+        //      var counter = 0;
+
+        //      return function() { return counter +=inc;};
+
+        // }
+
+        // adder = make_adder(5);
+        // console.log(adder());
+        // console.log(adder());
+
+        // adder2 = make_adder(7);
+        // console.log(adder2());
+
+        // var sum = [{x: 1}, {x:2}, {x:3}].reduce( function (accumulator, currentValue){
+        //         return accumulator + currentValue.x;}, 0);
+        // console.log(sum);
+
+        // "use strict";
+
+        // var b = 5;
+        // var c = hello(b);
+        // var a = 1000;
+        // var d = { a: 50, b: 90 };
+        // console.log(c.apply(d));
+        // function hello(a) {
+        //     console.log(this);
+        //     a = a * 2;
+        //     console.log(bye())
+        //     function bye() {
+        //         console.log(this);
+        //         console.log(b);
+        //         console.log(this.b);
+        //         return a;
+        //     }
+        //     var b = 100;
+        //     return bye;
+        // }
+
+        // const CAR = (function () {
+        //     let speed = 0;
+        //     let direction = 0;
+        //     const gasPaddle = function () {
+        //         speed += 5;
+        //         if (speed > 120) {
+        //             speed = 120;
+        //         }
+        //     };
+        //     const breakfun = function () {
+        //         speed -= 10;
+        //         if (speed < 0) {
+        //             speed = 0;
+        //         }
+        //     };
+        //     const turnLeft = function (degree) {
+        //         direction -= degrees;
+        //     };
+
+        //     const turnRight = function (degree) {
+        //         direction += degrees;
+        //     };
+        //     const status = function () {
+        //         console.log("The car is driving direction " + direction + " at " + speed + "mph");
+
+        //     };
+
+        //     return {
+        //         gasPaddle: gasPaddle,
+        //         breakfun: breakfun,
+        //         turnLeft = turnLeft,
+        //         turnRight = turnRight,
+        //         status = status
+        //     };
+
+
+        // }());
+
+        // function Computer(ram, cpu, storage) {
+        //     this.ram = ram;
+        //     this.cpu = cpu;
+        //     this.storage = storage;
+        // }
+
+        // Computer.prototype.runProgram = function (program) {
+        //     console.log("running: " + program);
+        // };
+
+        // function Laptop(battery, ram, cpu, storage) {
+        //     this.battery = battery;
+        //     this.ram = ram;
+        //     this.cpu = cpu;
+        //     this.storage = storage;
+        // }
+
+        // Laptop.prototype__proto__ = Computer.prototype;
+        // Laptop.prototype.carryAround = function () {
+        //     carrying("laptop:  cpu" + cpu + " ram: " + ram + " storage: " + storage + " battery: " + battery);
+        // }
+        // words = ["hello", "z", "bye"]; // should return "z"
+
+        // let shortestFinder = (words) => {
+
+        //     let shortestWord = words[0];
+
+        //     words.forEach(element => {
+
+        //         if (element.length < shortestWord.length) {
+
+        //             shortestWord = element;
+
+        //         }
+
+        //     });
+
+        //     return shortestWord;
+
+        // }
+
+        // console.log(shortestFinder(words));
+       
+    // function make_adder (inc){
+    //     let counter =0 ;
         
-// }
+    //     return function () { 
+    //         counter =counter + inc;
+    //         return counter;
+    //     };
+    // }
+    // let add1 = make_adder(2);
+    // console.log(add1());
+    // console.log(add1());
+    // console.log(add1());
+    // console.log(add1());
 
-// adder = make_adder(5);
-// console.log(adder());
-// console.log(adder());
+    // let add2 = make_adder(20);
+    // console.log(add2());
+    // console.log(add2());
 
-// adder2 = make_adder(7);
-// console.log(adder2());
+    function power()
+    {
+        let i = 0;
 
-var sum = [{x: 1}, {x:2}, {x:3}].reduce( function (accumulator, currentValue){
-        return accumulator + currentValue.x;}, 0);
-console.log(sum);
+        function multiply(){
+           
+            return   function () {   i+=1; return Math.pow(i, 2)};
+            
+        }
+        let mul = multiply();
+        // console.log(mul());
+        // console.log(mul());
+        // console.log(mul());
+
+        setInterval(console.log, 3000, mul() );
+
+    }
+    power();
 
 
 
-        
-        
-
-
-        
 
 
 
-        
+
+
+
+
+
 
 
 
