@@ -6,11 +6,14 @@ $(function () {
     $("div.boundary").on("mouseover", function(){
         
         if (start){
-            alert("Sorry, you lost:[");
+            $("#status").html("Sorry, you lost:[");
+            //alert("Sorry, you lost:[");
             $("div.boundary").addClass("youlose");
         }
-        else if (!start)
-            alert("Click on start the play the game!");
+        else if (!start){
+            $("#status").html("Click on start the play the game!");
+            // alert("Click on start the play the game!");
+        }
         lose = true;
 
     });
@@ -21,10 +24,14 @@ $(function () {
         start = true;
     });
     $("#end").mouseover(function () {
-        if (!lose & !wrongDirection)
-            alert("You win:]");
-        else if(wrongDirection)
-            alert("you followed the wrong direction!!"); 
+        if (!lose & !wrongDirection){
+            $("#status").html("You win:]");
+            //alert("You win:]");
+    }
+        else if(wrongDirection){
+            $("#status").html("you followed the wrong direction!!]");
+            //alert("you followed the wrong direction!!"); 
+        }
         start = false;       
     });
 
