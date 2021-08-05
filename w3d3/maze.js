@@ -10,7 +10,7 @@ $(function () {
             $("div.boundary").addClass("youlose");
         }
         else if (!start)
-            alert("Click on start the play the game!")
+            alert("Click on start the play the game!");
         lose = true;
 
     });
