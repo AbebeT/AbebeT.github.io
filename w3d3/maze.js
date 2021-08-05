@@ -14,13 +14,13 @@ $(function () {
         lose = true;
 
     });
-    $("#start").click(function(){
+    $("#start").mouseover(function(){
         $("div.boundary").removeClass("youlose");
         lose = false;
         wrongDirection = false;
         start = true;
     });
-    $("#end").click(function () {
+    $("#end").mouseover(function () {
         if (!lose & !wrongDirection)
             alert("You win:]");
         else if(wrongDirection)
