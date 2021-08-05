@@ -1,13 +1,16 @@
 $(function () {   
     let lose = false;
     let wrongDirection = false;
+    let start = false;
 
     $("div.boundary").on("mouseover", function(){
-        $("div.boundary").addClass("youlose");
-        if (!lose)
+        
+        if (start){
             alert("Sorry, you lost:[");
-        else
-            alert("Click, on start to statover!")
+            $("div.boundary").addClass("youlose");
+        }
+        else if (!start)
+            alert("Click on start the play the game!")
         lose = true;
 
     });
@@ -15,12 +18,14 @@ $(function () {
         $("div.boundary").removeClass("youlose");
         lose = false;
         wrongDirection = false;
+        start = true;
     });
     $("#end").click(function () {
         if (!lose & !wrongDirection)
             alert("You win:]");
         else if(wrongDirection)
-            alert("you followed the wrong direction!!");        
+            alert("you followed the wrong direction!!"); 
+        start = false;       
     });
 
     $("#maze").on("mouseleave", function(){
